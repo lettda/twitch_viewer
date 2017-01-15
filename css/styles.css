@@ -1,0 +1,54 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+img {
+	height: 200px;
+	width: 200px;
+	margin-top: 25px;
+}
+h3 {
+	font-size: 2.4em;
+	font-weight: bold;
+	height: 200px;
+	width: 200px;
+	margin-top: 25%;
+}
+.container {
+	height: 100vh;
+}
+/* ================================= 
+  Base Layout Styles
+==================================== */
+.col-sm-4 {
+	background-color: ;
+}
+#stream_headers {
+	justify-content: space-between;
+	background-color: ;
+	text-align: center;
+}
+#status,
+#streamerName{
+	height: 200px;
+	width: 200px;
+	align-items: center;
+	margin-top: 25px;
+	margin-left: 40px;
+	justify-content: center;
+}
+#streamInfo {
+	background-color: grey;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+	
+
+}
+
+@media (min-width: 1025px) {
+
+}
