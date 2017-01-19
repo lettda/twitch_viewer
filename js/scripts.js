@@ -19,13 +19,12 @@ $(document).ready(() => {
 
   console.log(followerNames); 
 
+
+
 for (var j = 0; j < followerNames.length; j++) { //iterate over the array of follower names
-
-	followerNames[j] = function () { //function to call the ajax request on each channel the user follows
-
 		$.ajax({
  		type: 'GET',
- 		url:  'https://api.twitch.tv/kraken/streams/'+[j],
+ 		url:  'https://api.twitch.tv/kraken/streams/'+followerNames[j],
  		headers: {
   		 'Client-ID': 'drj8nyih5rn8z2go1x0fgga6dmudwx'
  		},
@@ -51,6 +50,5 @@ for (var j = 0; j < followerNames.length; j++) { //iterate over the array of fol
    			}
  		}
 		});
-   }
 	}
 });
