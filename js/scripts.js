@@ -1,9 +1,10 @@
 $(document).ready(() => {
 
-  let followerNames = [];
+  const followerNames = []; //contains list of current streamers user is following
 
     $.ajax({
     type: 'GET',
+    async: false,
     url: "https://api.twitch.tv/kraken/users/SCKADOOSH/follows/channels",
     headers: {
        'Client-ID': 'drj8nyih5rn8z2go1x0fgga6dmudwx'
@@ -17,8 +18,7 @@ $(document).ready(() => {
     }
   });
 
-  console.log(followerNames); 
-
+console.log(followerNames);
 
 
 for (var j = 0; j < followerNames.length; j++) { //iterate over the array of follower names
@@ -44,9 +44,9 @@ for (var j = 0; j < followerNames.length; j++) { //iterate over the array of fol
    				const channelLogo = data.stream.channel.logo; //get channel logo
    				const streamerName = data.stream.channel.display_name; //get streamer name
           const streamLink = "https://www.twitch.tv/"+streamerName; //get link to streamers schannel
-   				$("#status").append("<h3><a href=" + streamLink +">" + streamStatus.game + "</a></h3>") //display game currently streaming on channel
+   				$("#status").append("<h3><a href=" + streamLink +" target='_blank'>" + streamStatus.game + "</a></h3>") //display game currently streaming on channel
    				$("#logo").append("<img class='streamerLogo' src='" + channelLogo + "'/>"); //display channel logo
-   				$("#streamerName").append("<h3>"+ streamerName+"</h3>"); //display streamer name
+   				$("#streamerName").append('<h3>'+ streamerName +'</h3>'); //display streamer name
    			}
  		}
 		});
